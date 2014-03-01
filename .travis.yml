@@ -2,7 +2,10 @@ language: python
 python:
   - "3.3"
 env:
-  - DJANGO=https://www.djangoproject.com/download/1.7a2/tarball/
+  - DJANGO=http://www.djangoproject.com/download/1.7a2/tarball/
 install:
-  - pip install -q $DJANGO --use-mirrors
-  - pip install -r requirements.txt --use-mirrors
+  - pip -q install $DJANGO
+  - pip -q install --upgrade -r requirements.txt
+  - cp gordio_site/settings_local_example.py gordio_site/settings_local.py
+script: 
+  - python manage.py test
