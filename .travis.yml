@@ -1,0 +1,8 @@
+language: python
+python:
+  - "3.3"
+env:
+  - DJANGO=https://www.djangoproject.com/download/1.7a2/tarball/
+install:
+  - pip install -q $DJANGO --use-mirrors
+  - pip install -r requirements.txt --use-mirrors
