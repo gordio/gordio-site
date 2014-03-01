@@ -43,10 +43,20 @@ PIPELINE_JS_COMPRESSOR = 'pipeline.compressors.jsmin.JSMinCompressor'
 PIPELINE_CSS = {
     'main': {
         'source_filenames': (
-          'css/reset.css',
+          'css/normalize.css',
           'css/messages.css',
+          'css/font-icons.css',
         ),
         'output_filename': 'assets/main.css',
+        'extra_context': {
+            'media': 'screen,projection',
+        },
+    },
+    'vcard': {
+        'source_filenames': (
+          'css/vcard.css',
+        ),
+        'output_filename': 'assets/vcard.css',
         'extra_context': {
             'media': 'screen,projection',
         },
@@ -109,9 +119,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-LOCALE_PATHS = (
-    BASE_DIR + '/locale',
-)
+LOCALE_PATHS = (BASE_DIR + '/locale', )
 
 
 # Static files (CSS, JavaScript, Images)

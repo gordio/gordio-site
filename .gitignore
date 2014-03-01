@@ -8,4 +8,4 @@
 venv
 public/static/[^.]*
 public/media/[^.]*
-{{ project_name }}/settings_local.py
+gordio_site/settings_local.py
