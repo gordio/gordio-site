@@ -33,6 +33,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'pipeline',
+    'articles',
+    'core',
 )
 
 STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
@@ -44,7 +46,9 @@ PIPELINE_CSS = {
     'main': {
         'source_filenames': (
           'css/normalize.css',
+          'css/base.css',
           'css/messages.css',
+          'css/nav.css',
           'css/font-icons.css',
         ),
         'output_filename': 'assets/main.css',
@@ -94,6 +98,10 @@ WSGI_APPLICATION = 'gordio_site.wsgi.application'
 
 TEMPLATE_DIRS = (BASE_DIR + '/templates/', )
 
+from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS
+TEMPLATE_CONTEXT_PROCESSORS += (
+    "django.core.context_processors.request",
+)
 
 # Database
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
