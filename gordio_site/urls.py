@@ -6,6 +6,7 @@ from django.views.generic import RedirectView, TemplateView
 urlpatterns = patterns('',
     url(r'^$', RedirectView.as_view(url="/vcard/"), name="index"),
     url(r'^vcard/$', TemplateView.as_view(template_name="vcard.html"), name="vcard"),
+    url(r'^about/$', TemplateView.as_view(template_name="about.html"), name="about"),
     url(r'^articles/', include('articles.urls', namespace="articles")),
     url(r'^contacts/', include('contacts.urls', namespace="contacts")),
     url(r'^captcha/', include('captcha.urls')),
