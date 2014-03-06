@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load i18n compressed markup %}
+
+
+{% block title %}{{ article.title|title }} — {{ block.super }}{% endblock title %}
+
+{% block head %}
+    {{ block.super }}
+    {% compressed_css 'articles' %}
+    {% compressed_js 'articles' %}
+{% endblock head %}
+
+{% block content %}
+<article class="container page article">
+    <h1 class="title">{{ article.title }}</h1>
+    {{ article.content|markdown }}
+</article>
+{% endblock content %}

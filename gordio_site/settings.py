@@ -48,7 +48,8 @@ PIPELINE_CSS = {
           'css/normalize.css',
           'css/base.css',
           'css/messages.css',
-          'css/nav.css',
+          'css/navigation.css',
+          'css/pagination.css',
           'css/font-icons.css',
         ),
         'output_filename': 'assets/main.css',
@@ -65,18 +66,35 @@ PIPELINE_CSS = {
             'media': 'screen,projection',
         },
     },
+    'articles': {
+        'source_filenames': (
+          'css/articles.css',
+        ),
+        'output_filename': 'assets/articles.css',
+        'extra_context': {
+            'media': 'screen,projection',
+        },
+    },
 }
 
 # PIPELINE_DISABLE_WRAPPER = True
-# PIPELINE_JS = {
-#     'main': {
-#         'source_filenames': (
-#           'js/main.js',
-#           'js/main-init.js',
-#         ),
-#         'output_filename': 'assets/main.js',
-#     }
-# }
+PIPELINE_JS = {
+    # 'main': {
+    #     'source_filenames': (
+    #       'js/main.js',
+    #       'js/main-init.js',
+    #     ),
+    #     'output_filename': 'assets/main.js',
+    # },
+    'articles': {
+        'source_filenames': (
+            'js/Hyphenator.js',
+            'js/patterns/ru.js',
+            'js/Hyphenator-init.js',
+        ),
+        'output_filename': 'assets/articles.js',
+    },
+}
 
 
 MIDDLEWARE_CLASSES = (

@@ -1,14 +1,14 @@
 {
-	"folders":
+	"build_systems":
 	[
 		{
-			"file_exclude_patterns":
-			[
-				"*.pyc"
-			],
-			"name": "Apps",
-			"path": "apps"
-		},
+			"name": "Rebuild project",
+			"shell_cmd": "fab build",
+			"working_dir": "${project_path}"
+		}
+	],
+	"folders":
+	[
 		{
 			"file_exclude_patterns":
 			[
@@ -18,25 +18,17 @@
 			],
 			"folder_exclude_patterns":
 			[
-				"apps",
 				"venv"
 			],
+			"follow_symlinks": true,
 			"name": "Project",
-			"path": "./"
+			"path": "."
 		}
 	],
 	"settings":
 	{
+		"ensure_newline_at_eof_on_save": true,
 		"tab_size": 4,
-		"translate_tabs_to_spaces": true,
-		"ensure_newline_at_eof_on_save": true
-	},
-	"build_systems":
-	[
-		{
-			"name": "Rebuild project",
-			"working_dir": "${project_path}",
-			"shell_cmd": "fab build"
-		}
-	]
+		"translate_tabs_to_spaces": true
+	}
 }
