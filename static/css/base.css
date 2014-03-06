@@ -31,6 +31,12 @@ a:active {
     background: #FAFAFA;
 }
 
+h1.title {
+    margin: 0;
+    padding: 0;
+    padding-top: 0.5em;
+}
+
 
 /*// Small screens*/
 /* max-width 640px, mobile-only styles, use when QAing mobile issues */
@@ -46,6 +52,7 @@ a:active {
     .page {
         margin-top: 0.625em;
         margin-bottom: 0.625em;
+        padding: 1em 1.5em;
         border: 0.0625em solid #C3CCD0;
         overflow: hidden;
         text-align: justify;

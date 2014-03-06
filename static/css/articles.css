@@ -2,11 +2,6 @@
     margin: 0;
 }
 
-.article h1.title {
-    margin: 0;
-    padding: 0;
-}
-
 .article blockquote {
     margin-left: 2em;
     margin-right: 0;

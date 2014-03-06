@@ -2,7 +2,7 @@
 <div class="top-nav-wrap">
 <div class="container">
   <nav class="top-menu">
-    <a class="" href="#">{% trans "About" %}</a>
+    <a class="{% url_active 'about' %}" href="">{% trans "About" %}</a>
     <a class="{% url_active 'articles:list' False %}" href="{% url 'articles:list' %}">{% trans "Articles" %}</a>
     <a class="home {% url_active 'vcard' %}" href="/" data-icon="&#x2a;"></a>
     <a class="" href="http://code.gordio.pp.ua/">{% trans "Projects" %}</a>
