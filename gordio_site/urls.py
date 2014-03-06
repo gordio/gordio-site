@@ -7,6 +7,8 @@ urlpatterns = patterns('',
     url(r'^$', RedirectView.as_view(url="/vcard/"), name="index"),
     url(r'^vcard/$', TemplateView.as_view(template_name="vcard.html"), name="vcard"),
     url(r'^articles/', include('articles.urls', namespace="articles")),
+    url(r'^contacts/', include('contacts.urls', namespace="contacts")),
+    url(r'^captcha/', include('captcha.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
 )

@@ -1,0 +1,45 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.contacts h1.title {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0.5em;
+}
+
+form .errorlist {
+    margin: 0;
+    margin-bottom: 0.125em;
+    color: #A00;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* hard style for captcha */
+form img.captcha {
+    float: left;
+    border: 1px solid #BBB;
+    padding-right: 0.25em;
+    height: 1.8rem;
+    width: 4em;
+
+    -webkit-border-radius: 0.125rem;
+    border-radius: 0.125rem;
+}
+
+form #id_captcha_1 {
+    float: left;
+    width: 5em;
+    height: 1.8rem;
+    margin-left: 0.5em;
+}
+
+/* hack */
+form input[type="submit"],
+form button.send {
+    margin-left: 0.5em;
+    margin-bottom: 0.75em;
+    float: right;
+}

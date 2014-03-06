@@ -6,7 +6,7 @@
     <a class="{% url_active 'articles:list' False %}" href="{% url 'articles:list' %}">{% trans "Articles" %}</a>
     <a class="home {% url_active 'vcard' %}" href="/" data-icon="&#x2a;"></a>
     <a class="" href="http://code.gordio.pp.ua/">{% trans "Projects" %}</a>
-    <a class="" href="#">{% trans "Contact" %}</a>
+    <a class="{% url_active 'contacts:home' False %}" href="{% url 'contacts:home' %}">{% trans "Contact" %}</a>
   </nav>
 </div>
 </div>

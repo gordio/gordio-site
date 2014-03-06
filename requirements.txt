@@ -6,3 +6,4 @@ django-pipeline>=1.3, <1.4
 cssmin # required by django-pipeline
 jsmin  # required by django-pipeline
 Markdown
+django-simple-captcha

@@ -33,8 +33,10 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'pipeline',
-    'articles',
     'core',
+    'articles',
+    'contacts',
+    'captcha',
 )
 
 STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
@@ -75,6 +77,16 @@ PIPELINE_CSS = {
             'media': 'screen,projection',
         },
     },
+    'contacts': {
+        'source_filenames': (
+          'css/form.css',
+          'css/contacts.css'
+        ),
+        'output_filename': 'assets/contacts.css',
+        'extra_context': {
+            'media': 'screen,projection',
+        },
+    },
 }
 
 # PIPELINE_DISABLE_WRAPPER = True
@@ -95,6 +107,15 @@ PIPELINE_JS = {
         'output_filename': 'assets/articles.js',
     },
 }
+
+CAPTCHA_FONT_SIZE = 20
+CAPTCHA_LENGTH = 3
+CAPTCHA_LETTER_ROTATION = (-15, 15)
+CAPTCHA_BACKGROUND_COLOR = '#EFEFEF'
+CAPTCHA_FOREGROUND_COLOR = '#111111'
+CAPTCHA_TIMEOUT = 10
+CAPTCHA_NOISE_FUNCTIONS = ('captcha.helpers.noise_dots', )
+CAPTCHA_FILTER_FUNCTIONS = None
 
 
 MIDDLEWARE_CLASSES = (

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load i18n staticfiles %}
+
+
+{% block title %}{% trans "Contacts" %} — {{ block.super }}{% endblock title %}
+
+{% block head %}
+  {{ block.super }}
+  {% load compressed %}
+  {% compressed_css 'contacts' %}
+
+  {% load compressed %}
+  {% compressed_js 'contacts' %}
+{% endblock head %}
+
+{% block content %}
+<div class="container">
+  <section class="send_message contacts page">
+  <h1 class="title">{% trans "Send message" %}</h1>
+  <form action="." method="POST">
+    {% csrf_token %}
+    {{ form }} 
+    <div class="buttons">
+      <button class="icon-bubbles send" type="submit">{% trans 'Send' %}</button>
+      <button onclick="history.back()">{% trans 'Cancel' %}</button>
+    </div>
+  </form>
+  <script>document.getElementById('id_email').focus()</script>
+</section>
+</div>
+{% endblock content %}

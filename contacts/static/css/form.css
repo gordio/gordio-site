@@ -47,8 +47,8 @@ select {
 	margin: 0;
 	margin-bottom: 0.5rem;
 	padding: 0.35em 0.5em 0.3em;
-	width: 100%;
-	min-width: 2em;
+	/*width: 50%; see MEDIA */
+	min-width: 5em;
 	color: #444;
 	background: #FFF;
 	border: 1px solid #BBB;
@@ -65,6 +65,7 @@ select {
 textarea {
 	font-family: sans-serif;
 	min-height: 4em;
+	width: 100%;
 }
 
 input[type="file"],
@@ -81,24 +82,24 @@ select {
 	box-sizing: border-box;
 }
 
-input[type="tel"].half,
-input[type="search"].half,
-input[type="url"].half,
-input[type="datetime"].half,
-input[type="week"].half,
-input[type="datetime-local"].half,
-input[type="date"].half,
-input[type="month"].half,
-input[type="time"].half,
-input[type="number"].half,
-input[type="range"].half,
-input[type="color"].half,
-input[type="text"].half,
-input[type="password"].half,
-input[type="email"].half,
-select.half,
-textarea.half {
-	width: 50%;
+input[type="tel"].full,
+input[type="search"].full,
+input[type="url"].full,
+input[type="datetime"].full,
+input[type="week"].full,
+input[type="datetime-local"].full,
+input[type="date"].full,
+input[type="month"].full,
+input[type="time"].full,
+input[type="number"].full,
+input[type="range"].full,
+input[type="color"].full,
+input[type="text"].full,
+input[type="password"].full,
+input[type="email"].full,
+select.full,
+textarea.full {
+	width: 100%;
 }
 
 input[type="tel"]:focus,
@@ -265,4 +266,47 @@ form div.buttons input + input,
 form div.buttons input + button,
 form div.buttons button + input {
 	margin-left: 0.5rem;
+}
+
+@media only screen and (max-width: 40em) {
+	input[type="tel"],
+	input[type="search"],
+	input[type="url"],
+	input[type="datetime"],
+	input[type="week"],
+	input[type="datetime-local"],
+	input[type="date"],
+	input[type="month"],
+	input[type="time"],
+	input[type="number"],
+	input[type="range"],
+	input[type="color"],
+	input[type="text"],
+	input[type="password"],
+	input[type="email"] {
+		width: 100%;
+	}
+} 
+
+/*// Medium screens*/
+/* min-width 641px, medium screens */
+@media only screen and (min-width: 40.063em) {
+	input[type="tel"],
+	input[type="search"],
+	input[type="url"],
+	input[type="datetime"],
+	input[type="week"],
+	input[type="datetime-local"],
+	input[type="date"],
+	input[type="month"],
+	input[type="time"],
+	input[type="number"],
+	input[type="range"],
+	input[type="color"],
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	select {
+		width: 50%;
+	}
 }
