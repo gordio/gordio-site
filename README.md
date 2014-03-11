@@ -1,6 +1,15 @@
 [![Build Status](https://travis-ci.org/gordio/gordio-site.png?branch=master)](https://travis-ci.org/gordio/gordio-site)
 
 
+Installing
+==========
+
+```
+fab build
+fab 'manage:loaddata flatpages.json'
+```
+
+
 Development environment required
 =======
 

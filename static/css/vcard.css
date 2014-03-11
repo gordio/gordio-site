@@ -129,8 +129,8 @@ html {
 	background-image: linear-gradient(#E82, #D61);
 }
 .profile.twitter {
-	/*background-image: -webkit-linear-gradient(#5BD, #4AC);*/
-	background-image: linear-gradient(rgb(71, 190, 230), rgb(0, 166, 211));
+	background-image: -webkit-linear-gradient(#47BEE6, #00A6D3);
+	background-image: linear-gradient(#47BEE6, #00A6D3);
 }
 
 
@@ -155,7 +155,8 @@ html {
 
 /* Icons fix */
 [class^="icon-"]:before, [class*=" icon-"]:before {
-	padding-right: 0.125em;
+	padding-right: 0.25em;
+	text-decoration: none !important;
 }
 
 
