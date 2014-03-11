@@ -54,7 +54,7 @@ PIPELINE_CSS = {
           'css/messages.css',
           'css/navigation.css',
           'css/pagination.css',
-          'css/font-icons.css',
+          'css/icons.css',
         ),
         'output_filename': 'assets/main.css',
         'extra_context': {
