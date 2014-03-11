@@ -37,3 +37,7 @@ form button.send {
     margin-bottom: 0.75em;
     float: right;
 }
+
+.icon-paperplane:before {
+    padding-right: 0.5em;
+}
