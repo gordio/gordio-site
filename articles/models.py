@@ -1,4 +1,5 @@
 from django.db import models
+from datetime import datetime
 
 
 class Article(models.Model):
@@ -7,7 +8,7 @@ class Article(models.Model):
     content = models.TextField(max_length=5000)
     created_date = models.DateTimeField(auto_now_add=True)
     edited_date = models.DateTimeField(auto_now=True)
-    pub_date = models.DateTimeField()
+    pub_date = models.DateTimeField(default=datetime.now)
 
     @models.permalink
     def get_absolute_url(self):
