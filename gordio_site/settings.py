@@ -79,6 +79,15 @@ PIPELINE_CSS = {
             'media': 'screen,projection',
         },
     },
+    'hilightjs': {
+        'source_filenames': (
+          'css/hilightjs.css',
+        ),
+        'output_filename': 'assets/hilightjs.css',
+        'extra_context': {
+            'media': 'screen,projection',
+        },
+    },
     'contacts': {
         'source_filenames': (
           'css/form.css',
@@ -100,11 +109,18 @@ PIPELINE_JS = {
     #     ),
     #     'output_filename': 'assets/main.js',
     # },
+    'hilightjs': {
+        'source_filenames': (
+            'js/highlight.pack.js',
+            'js/highlight.init.js',
+        ),
+        'output_filename': 'assets/hilightjs.js',
+    },
     'articles': {
         'source_filenames': (
-            'js/Hyphenator.js',
+            'js/hyphenator.js',
             'js/patterns/ru.js',
-            'js/Hyphenator-init.js',
+            'js/hyphenator.init.js',
         ),
         'output_filename': 'assets/articles.js',
     },
