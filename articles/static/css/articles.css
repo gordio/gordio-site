@@ -7,6 +7,19 @@
     margin-right: 0;
 }
 
+.article blockquote:before {
+    content: '“';
+    position: relative;
+    margin-left: -0.5em;
+    float: left;
+    font-size: 2em;
+    color: #AAA;
+}
+
+/*.article blockquote:after {
+    content: '”';
+}*/
+
 .article code {
     padding: 0 0.125em;
     border: 1px solid #CCC;

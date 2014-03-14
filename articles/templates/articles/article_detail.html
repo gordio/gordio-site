@@ -13,8 +13,10 @@
 {% endblock head %}
 
 {% block content %}
-<article class="container page article">
-    <h1 class="title">{{ article.title }}</h1>
-    {{ article.content|markdown }}
-</article>
+<section class="container">
+    <article class="page article">
+        <h1 class="title">{{ article.title }}</h1>
+        {{ article.content|markdown }}
+    </article>
+</section>
 {% endblock content %}

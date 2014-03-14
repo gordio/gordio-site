@@ -11,18 +11,20 @@
 {% endblock head %}
 
 {% block content %}
-<section class="container page articles_list">
-    {% for a in articles %}
-    <article>
-        <h1><a href="{{ a.get_absolute_url }}">{{ a.title }}</a></h1>
-        <section class="description">
-            {{ a.content|truncatewords:"40"|markdown }}
-        </section>
-    </article>
-    {% empty %}
-    <p>{% trans "Sorry. Articles don't exist." %}</p>
-    {% endfor %}
+<section class="container">
+    <section class="page articles_list">
+        {% for a in articles %}
+        <article>
+            <h1><a href="{{ a.get_absolute_url }}">{{ a.title }}</a></h1>
+            <section class="description">
+                {{ a.content|truncatewords:"40"|markdown }}
+            </section>
+        </article>
+        {% empty %}
+        <p>{% trans "Sorry. Articles don't exist." %}</p>
+        {% endfor %}
 
-    {% include "pagination.html" %}
+        {% include "pagination.html" %}
+    </section>
 </section>
 {% endblock content %}
