@@ -73,6 +73,7 @@ PIPELINE_CSS = {
     'articles': {
         'source_filenames': (
           'css/articles.css',
+          'css/tags.css',
         ),
         'output_filename': 'assets/articles.css',
         'extra_context': {

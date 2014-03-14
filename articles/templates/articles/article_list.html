@@ -16,6 +16,11 @@
         {% for a in articles %}
         <article>
             <h1 class="title"><a href="{{ a.get_absolute_url }}">{{ a.title }}</a></h1>
+            {# <ul class="tags"> #}
+            {# {% for t in tags %} #}
+                {# <li><a href="{% url articles:list_by_tag tag %}">{{ t.title }} <span>{{ t.count }}</span></a></li> #}
+            {# {% endfor %} #}
+            {# </ul> #}
             <section class="description">
                 {{ a.content|truncatewords:"40"|markdown }}
             </section>
