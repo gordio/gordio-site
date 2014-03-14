@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'articles',
     'contacts',
     'captcha',
+    'taggit',
 )
 
 STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'

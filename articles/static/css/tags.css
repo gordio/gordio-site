@@ -1,7 +1,12 @@
 .tags {
     margin: 0;
+    margin-top: 0.25em;
     padding: 0;
     list-style-type: none;
+}
+
+.tags + p {
+    margin-top: 0;
 }
 
 .tags:before,
@@ -34,7 +39,7 @@
 
     border-radius: 3px 0 0 3px;
     /*box-shadow: inset 1px 0 #99400e;*/
-    box-shadow: inset 1px 0 #AAA;
+    box-shadow: inset 1px 0 #CCC;
 }
 
 .tags a,
@@ -75,11 +80,12 @@
     text-shadow: 0 1px 1px #000;
 
     border-radius: 0 2px 2px 0;
-    transition: 0.3s ease-out;
+    transition: 0.1s ease-out;
     transition-property: padding, max-width;
 }
 
-.tags a:hover span {
+/* FIXME: Uncomment after get 'count' working */
+/*.tags a:hover span {
     padding: 0 7px 0 6px;
     max-width: 40px;
-}
+}*/

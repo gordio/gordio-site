@@ -7,3 +7,4 @@ cssmin # required by django-pipeline
 jsmin  # required by django-pipeline
 Markdown
 django-simple-captcha
+git+https://github.com/alex/django-taggit.git

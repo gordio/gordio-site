@@ -1,5 +1,6 @@
 from django.db import models
 from datetime import datetime
+from taggit.managers import TaggableManager
 
 
 class Article(models.Model):
@@ -9,6 +10,7 @@ class Article(models.Model):
     created_date = models.DateTimeField(auto_now_add=True)
     edited_date = models.DateTimeField(auto_now=True)
     pub_date = models.DateTimeField(default=datetime.now)
+    tags = TaggableManager()
 
     @models.permalink
     def get_absolute_url(self):
