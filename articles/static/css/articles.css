@@ -1,5 +1,6 @@
-.articles_list > article h1 {
+.articles_list article h1.title {
     margin: 0;
+    font-size: 1.5em;
 }
 
 .article blockquote {
@@ -42,6 +43,12 @@
 .article {
     line-height: 1.25em;
 }
+
+/* little fix */
+.articles_list article .description p {
+    margin-top: 0.125em;
+}
+
 
 /*// Small screens*/
 /* max-width 640px, mobile-only styles, use when QAing mobile issues */
