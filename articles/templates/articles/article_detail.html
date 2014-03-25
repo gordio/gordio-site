@@ -13,15 +13,17 @@
 {% endblock head %}
 
 {% block content %}
-<section class="container">
-    <article class="page article">
-        <h1 class="title">{{ article.title }}</h1>
-        <ul class="tags">
-        {% for tag in article.tags.all %}
-            <li><a href="{% url 'articles:tagged' tag %}">{{ tag.name }}<span>{{ tag.count }}</span></a></li>
-        {% endfor %}
-        </ul>
-        {{ article.content|markdown }}
-    </article>
-</section>
+<div class="container">
+    <section class="page">
+        <article class="article_detail">
+            <h1 class="title">{{ article.title }}</h1>
+            <ul class="tags">
+                {% for tag in article.tags.all %}
+                <li><a href="{% url 'articles:tagged' tag %}">{{ tag.name }}</a></li>
+                {% endfor %}
+            </ul>
+            {{ article.content|markdown }}
+        </article>
+    </section>
+</div>
 {% endblock content %}
