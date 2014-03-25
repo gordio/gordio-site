@@ -17,7 +17,7 @@ form img.captcha {
     border: 1px solid #BBB;
     padding-right: 0.25em;
     height: 1.8rem;
-    width: 4em;
+    width: 3.5em;
 
     -webkit-border-radius: 0.125rem;
     border-radius: 0.125rem;
@@ -25,10 +25,17 @@ form img.captcha {
 
 form #id_captcha_1 {
     float: left;
-    width: 5em;
+    width: 3em;
     height: 1.8rem;
     margin-left: 0.5em;
+    text-align: center;
     text-transform: uppercase;
+}
+
+@media only screen and (max-width: 40em) {
+    form textarea#id_content {
+        height: 6em;
+    }
 }
 
 /* hack */

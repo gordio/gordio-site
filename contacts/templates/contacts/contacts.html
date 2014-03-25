@@ -15,16 +15,18 @@
 
 {% block content %}
 <div class="container">
-  <section class="send_message contacts page">
-  <h1 class="title">{% trans "Send message" %}</h1>
-  <form action="." method="POST">
-    {% csrf_token %}
-    {{ form }} 
-    <div class="buttons">
-      <button class="icon-paperplane send" type="submit">{% trans 'Send' %}</button>
-      <button onclick="javascript:window.history.back(-1);return false;">{% trans 'Cancel' %}</button>
+  <section class="page">
+    <div class="send_message contacts">
+      <h1 class="title">{% trans "Send message" %}</h1>
+      <form action="." method="POST">
+        {% csrf_token %}
+        {{ form }} 
+        <div class="buttons">
+          <button class="icon-paperplane send" type="submit">{% trans 'Send' %}</button>
+          <button onclick="javascript:window.history.back(-1);return false;">{% trans 'Cancel' %}</button>
+        </div>
+      </form>
     </div>
-  </form>
   <script>document.getElementById('id_email').focus()</script>
 </section>
 </div>
