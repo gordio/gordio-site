@@ -1,5 +1,4 @@
 from django.db import models
-from datetime import datetime
 from taggit.managers import TaggableManager
 
 
@@ -9,7 +8,7 @@ class Article(models.Model):
     content = models.TextField(max_length=5000)
     created_date = models.DateTimeField(auto_now_add=True)
     edited_date = models.DateTimeField(auto_now=True)
-    pub_date = models.DateTimeField(default=datetime.now)
+    pub_date = models.DateTimeField(auto_now_add=True)
     tags = TaggableManager()
 
     @models.permalink
