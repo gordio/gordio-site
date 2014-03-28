@@ -14,7 +14,6 @@
 {% endblock head %}
 
 {% block content %}
-<div class="container">
   <section class="page">
     <div class="send_message contacts">
       <h1 class="title">{% trans "Send message" %}</h1>
@@ -27,7 +26,6 @@
         </div>
       </form>
     </div>
-  <script>document.getElementById('id_email').focus()</script>
-</section>
-</div>
+    <script>document.getElementById('id_email').focus()</script>
+  </section>
 {% endblock content %}

@@ -30,27 +30,27 @@
   </section>
   {% endif %}
 
-  <section id="content">
+  <section id="content" class="container">
     {% block content %}
     {% endblock content %}
   </section>
 
   {#-- Yandex.Metrika counter -#}
   {% if not DEBUG %}
-  <div style="display:none;">
-    <script type="text/javascript">
-      (function(w, c) {
-        (w[c] = w[c] || []).push(function() {
-          try {
-            w.yaCounter11936827 = new Ya.Metrika({id:11936827, enableAll: true, webvisor:true});
-          }
-          catch(e) { }
-        });
-      })(window, "yandex_metrika_callbacks");
-    </script>
-  </div>
-  <script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
-  <noscript><div><img src="//mc.yandex.ru/watch/11936827" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+    <div style="display:none;">
+      <script type="text/javascript">
+        (function(w, c) {
+          (w[c] = w[c] || []).push(function() {
+            try {
+              w.yaCounter11936827 = new Ya.Metrika({id:11936827, enableAll: true, webvisor:true});
+            }
+            catch(e) { }
+          });
+        })(window, "yandex_metrika_callbacks");
+      </script>
+    </div>
+    <script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+    <noscript><div><img src="//mc.yandex.ru/watch/11936827" style="position:absolute; left:-9999px;" alt=""></div></noscript>
   {% endif %}
   {#-- /Yandex.Metrika counter -#}
 </body>

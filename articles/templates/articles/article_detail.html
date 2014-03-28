@@ -13,7 +13,6 @@
 {% endblock head %}
 
 {% block content %}
-<div class="container">
     <section class="page">
         <article class="article_detail">
             <h1 class="title">{{ article.title }}</h1>
@@ -25,5 +24,4 @@
             {{ article.content|markdown }}
         </article>
     </section>
-</div>
 {% endblock content %}

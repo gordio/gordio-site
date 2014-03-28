@@ -11,7 +11,6 @@
 {% endblock head %}
 
 {% block content %}
-<section class="container">
     <section class="page articles_list">
         {% for a in articles %}
         <article>
@@ -31,5 +30,4 @@
 
         {% include "pagination.html" %}
     </section>
-</section>
 {% endblock content %}
