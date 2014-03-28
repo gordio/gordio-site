@@ -55,9 +55,18 @@ html {
 
 .vcard h1 {
 	margin: 0;
+	margin-top: -0.25em; /* little better */
 	padding: 0;
 	font-size: 1.25em;
 	color: #111;
+}
+
+.vcard h2 {
+	margin: 0;
+	padding: 0;
+	padding-bottom: 0.125em; /* little better */
+	font-size: 1em;
+	color: #444;
 }
 
 .profiles {
@@ -136,21 +145,23 @@ html {
 }
 
 
-.footer {
+footer {
 	display: block;
 	padding-top: 0.225em;
 }
 
-.footer,
-.footer a {
-	color: #555;
+footer,
+footer a,
+footer a:visited {
+	color: #666 !important;
 }
 
-.footer a:hover {
-	color: #110;
+footer a:hover {
+	color: #110 !important;
+	text-decoration: none;
 }
 
-.footer .line {
+footer .line {
 	padding-top: 0.125em;
 	font-size: 0.875em;
 }
