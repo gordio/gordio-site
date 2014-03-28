@@ -26,9 +26,10 @@ form img.captcha {
 
 form #id_captcha_1 {
     float: left;
-    width: 3em;
-    height: 1.8rem;
     margin-left: 0.5em;
+    width: 3.5em;
+    min-width: 3.5em;
+    height: 1.8rem;
     text-align: center;
     text-transform: uppercase;
 }
