@@ -1,19 +1,19 @@
 {% load i18n %}
 
 {% if is_paginated %}
-<div class="pagination">
+  <div class="pagination">
     {% if page_obj.has_previous %}
-        <a href="?page={{ page_obj.previous_page_number }}">« {% trans "Previous" %}</a>
+      <a href="?page={{ page_obj.previous_page_number }}">« {% trans "Previous" %}</a>
     {% else %}
-        <span>« {% trans "Previous" %}</span>
+      <span>« {% trans "Previous" %}</span>
     {% endif %}
 
     <span>{{ page_obj.number }}/{{ page_obj.paginator.num_pages }}</span>
 
     {% if page_obj.has_next %}
-        <a href="?page={{ page_obj.next_page_number }}">{% trans "Next" %} »</a>
+      <a href="?page={{ page_obj.next_page_number }}">{% trans "Next" %} »</a>
     {% else %}
-        <span>{% trans "Next" %} »</span>
+      <span>{% trans "Next" %} »</span>
     {% endif %}
-</div>
+  </div>
 {% endif %}
