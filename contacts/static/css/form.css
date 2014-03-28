@@ -2,7 +2,6 @@
  * Form styles
  * Author: Gordienko Oleg aka Gordio - me[at]gordio.pp.ua
  */
-	/*font: 1em "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
 
 
 button::-moz-focus-inner,
@@ -63,7 +62,6 @@ select {
 }
 
 textarea {
-	font-family: sans-serif;
 	min-height: 4em;
 	width: 100%;
 }
