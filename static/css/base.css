@@ -25,6 +25,16 @@ a:active {
 }
 
 
+hr {
+    margin: 1em 0 0;
+    padding: 0;
+    height: 0;
+    border: 0;
+    border-bottom: 0.125em solid #dfe3e4;
+    clear: both;
+}
+
+
 .page {
     margin: 0;
     padding: 1em;
