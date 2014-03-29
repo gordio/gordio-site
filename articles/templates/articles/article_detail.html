@@ -18,7 +18,7 @@
             <h1 class="title">{{ article.title }}</h1>
             <ul class="tags">
                 {% for tag in article.tags.all %}
-                <li><a href="{% url 'articles:tagged' tag %}">{{ tag.name }}</a></li>
+                <li><a href="{% url 'articles:tagged' tag.slug %}">{{ tag.name }}</a></li>
                 {% endfor %}
             </ul>
             {{ article.content|markdown }}
