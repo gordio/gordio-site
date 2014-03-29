@@ -1,6 +1,5 @@
-.articles_list article h1.title {
-    margin: 0;
-    font-size: 1.5em;
+.article_detail h1.title {
+    font-size: 2em;
 }
 
 .article_detail blockquote {
