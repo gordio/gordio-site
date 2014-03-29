@@ -41,6 +41,7 @@
 
     .article_detail .tags li a {
         display: inline-block;
+        margin-right: 0.125em;
         padding: 0.125em 0.5em;
         color: #FFF;
         background: #C0C8CD;
