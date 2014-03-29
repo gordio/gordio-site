@@ -6,7 +6,7 @@ from taggit.managers import TaggableManager
 class Article(models.Model):
     slug = models.SlugField(max_length=50)
     title = models.CharField(max_length=100)
-    content = models.TextField(max_length=5000)
+    content = models.TextField(max_length=25000)
     created_date = models.DateTimeField(auto_now_add=True)
     edited_date = models.DateTimeField(auto_now=True)
     pub_date = models.DateTimeField(default=datetime.today)
