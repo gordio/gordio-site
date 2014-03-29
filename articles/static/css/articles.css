@@ -3,12 +3,12 @@
     font-size: 1.5em;
 }
 
-.article blockquote {
+.article_detail blockquote {
     margin-left: 2em;
     margin-right: 0;
 }
 
-.article blockquote:before {
+.article_detail blockquote:before {
     content: '“';
     position: relative;
     margin-left: -0.5em;
@@ -17,30 +17,30 @@
     color: #AAA;
 }
 
-/*.article blockquote:after {
+/*.article_detail blockquote:after {
     content: '”';
 }*/
 
-.article code {
+.article_detail code {
     padding: 0 0.125em;
     border: 1px solid #CCC;
     background: #F2F2F2;
     border-radius: 0.125em;
 }
 
-.article pre {
+.article_detail pre {
     padding: 0.125em 0.25em;
     border: 1px solid #CCC;
     background: #F2F2F2;
     border-radius: 0.125em;
 }
 
-.article pre > code {
+.article_detail pre > code {
     padding: 0;
     border: 0;
 }
 
-.article {
+.article_detail {
     line-height: 1.25em;
 }
 
@@ -68,10 +68,12 @@
 
     .articles_list > article:nth-child(even) {
         padding-left: 0.5em;
+        clear: right;
     }
 
     .articles_list > article:nth-child(odd) {
         padding-right: 0.5em;
+        clear: left;
     }
 }
 
