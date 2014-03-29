@@ -123,6 +123,7 @@ PIPELINE_JS = {
             'js/hyphenator.js',
             'js/patterns/ru.js',
             'js/hyphenator.init.js',
+            'js/disqus.init.js',
         ),
         'output_filename': 'assets/articles.js',
     },
