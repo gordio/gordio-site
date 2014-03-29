@@ -21,7 +21,7 @@
             {% endfor %}
             </ul>
             <section class="description">
-                {{ a.content|truncatewords:"40"|markdown }}
+                {{ a.description|truncatewords:"40"|markdown }}
             </section>
         </article>
         {% empty %}

@@ -12,6 +12,14 @@ class Article(models.Model):
     pub_date = models.DateTimeField(default=datetime.today)
     tags = TaggableManager()
 
+    @property
+    def description(self):
+        try:
+            desc = self.content.split('\n')[0]
+        except Exception:
+            desc = self.content
+        return desc
+
     @models.permalink
     def get_absolute_url(self):
         return ('articles:view', (), {'slug': self.slug})
