@@ -8,6 +8,7 @@
     {{ block.super }}
     {% compressed_css 'articles' %}
     {% compressed_js 'articles' %}
+    <link rel="alternate" type="application/rss+xml" title="Crazy Web/Django Developer" href="{% url 'articles:feed' %}">
 {% endblock head %}
 
 {% block content %}
