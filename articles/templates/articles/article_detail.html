@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "articles/article_list.html" %}
 {% load i18n compressed markup %}
 
 
@@ -6,8 +6,6 @@
 
 {% block head %}
     {{ block.super }}
-    {% compressed_css 'articles' %}
-    {% compressed_js 'articles' %}
     {% compressed_css 'hilightjs' %}
     {% compressed_js 'hilightjs' %}
 {% endblock head %}
