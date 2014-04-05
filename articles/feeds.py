@@ -9,9 +9,7 @@ class ArticlesFeed(Feed):
     link = '/'
 
     def items(self):
-        return Article.objects.filter(
-            pub_date__lte=datetime.now()
-        ).order_by('-pub_date')
+        return Article.objects.filter(pub_date__lte=datetime.now())
 
     def item_pubdate(self, item):
         return item.pub_date

@@ -20,9 +20,12 @@ class Article(models.Model):
             desc = self.content
         return desc
 
-    @models.permalink
-    def get_absolute_url(self):
-        return ('articles:view', (), {'slug': self.slug})
+    class Meta:
+        ordering = ['-pub_date']
 
     def __str__(self):
         return self.title
+
+    @models.permalink
+    def get_absolute_url(self):
+        return ('articles:view', (), {'slug': self.slug})

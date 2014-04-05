@@ -12,9 +12,7 @@ class ArticlesListView(ListView):
         """
         Return Articles greater than pub_date
         """
-        return Article.objects.filter(
-            pub_date__lte=datetime.now()
-        ).order_by('-pub_date')
+        return Article.objects.filter(pub_date__lte=datetime.now())
 
 
 class ArticlesTaggedView(ArticlesListView):
@@ -23,8 +21,9 @@ class ArticlesTaggedView(ArticlesListView):
         Return Articles tagged 'tag' and greater than pub_date
         """
         return Article.objects.filter(
-            tags__slug=self.kwargs.get('slug'), pub_date__lte=datetime.now()
-        ).order_by('-pub_date')
+            tags__slug=self.kwargs.get('slug'),
+            pub_date__lte=datetime.now()
+        )
 
 
 class ArticleDetailView(DetailView):
@@ -34,6 +33,4 @@ class ArticleDetailView(DetailView):
         """
         Return Articles greater than pub_date
         """
-        return Article.objects.filter(
-            pub_date__lte=datetime.now()
-        ).order_by('-pub_date')
+        return Article.objects.filter(pub_date__lte=datetime.now())
