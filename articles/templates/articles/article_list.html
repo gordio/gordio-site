@@ -5,6 +5,8 @@
 {% block title %}{% trans "Articles" %} — {{ block.super }}{% endblock title %}
 
 {% block head %}
+    <meta name="DC.rights" scheme="DCTERMS.URI" content="http://creativecommons.org/licenses/by/4.0/">
+    <meta name="DC.rights" content="(cc) 2010-{% now "Y" %} Oleg Gordienko">
     {{ block.super }}
     {% compressed_css 'articles' %}
     {% compressed_js 'articles' %}
