@@ -41,6 +41,14 @@ nav.top-menu a.active {
     box-shadow: inset 1px 0 0 rgba(0, 0, 0, 0.5), inset -1px 0 0 rgba(0, 0, 0, 0.2), inset 0 0 1em rgba(0, 0, 0, 0.2);
 }
 
+nav.top-menu a.disabled,
+nav.top-menu a.disabled:hover {
+    opacity: 0.8;
+    color: #89A !important;
+    background: #444 !important;
+    cursor: default;
+}
+
 nav.top-menu a,
 nav.top-menu a:hover,
 nav.top-menu a:active {
